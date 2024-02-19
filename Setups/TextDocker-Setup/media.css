@@ -1,0 +1,63 @@
+/* 
+    ? CSS Media Control Environment
+    * It makes Project Responsive on Cross-Platforms
+*/
+
+@media only screen and (max-width: 912px) and (orientation: portrait) {
+    h1 > span{
+        font-size: clamp(2rem,6vw,5.6rem);
+    }
+
+    .file_catcher{
+        & .file_uploader{
+            & .sensor_area{
+                & .upload_ico{
+                    width: clamp(8rem,20vw,13rem);
+                }
+
+                & .upload_subtitles{
+                    font-size: initial;
+                }
+
+                & .upload_subtitles::first-line{
+                    font-size: clamp(1.3rem,2.5vw,2.1rem);
+                }
+            }
+        }
+    } 
+}
+
+
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+    body {
+        padding: 0rem 0rem;
+    }
+
+    .file_catcher{
+        & .file_uploader{
+            width: 90%;
+            
+            & .sensor_area{
+                padding: 2rem 0rem;
+            }
+        }
+
+        & .file_precessor{
+            width: 90%;
+
+            & button{
+                padding: 0.5rem 0rem;
+            }
+
+            & .details > h2{
+                font-size: 20px;
+            }
+        }
+    } 
+
+    .content_reader{
+        width: 90%;
+        min-width: var(--minWidth);
+    }
+}

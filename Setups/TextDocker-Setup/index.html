@@ -1,0 +1,101 @@
+<!-- 
+    ? TextDocker Index File 
+    * Interface Of Project 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- * Basic Meta Setup -->
+    <title>TextDocker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- * Internal Links -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="media.css">
+    <script async type="text/javascript" src="module.js"></script>
+    <script async type="text/javascript" src="engine.js"></script>
+
+    <!-- * External Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bree+Serif&family=Poppins&family=Roboto&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+ 
+    <!-- ? Page Heading -->
+    <!-- * Main Head of Page -->
+    <h1><span>TextDocker</span></h1>
+
+
+
+    <!-- ? File Catchers -->
+    <!-- * Two Step Process -->
+    <div class="file_catcher">
+
+        <!-- ? Upload Section  -->
+        <!-- * Cateches & Shows Files  -->
+        <section id="uploader" class="file_uploader">
+            <label name="FileInp" class="sensor_area">
+                <input type="file" name="FileInp" id="FileInp" hidden accept=".txt">
+                <img alt="Upload Icon" width="150px" class="upload_ico" src="./Media/upload-icon.png">
+                <p class="upload_subtitles">
+                    Drag & Drop or Click <br> 
+                    To Upload Document
+                </p>
+            </label>
+        </section>
+
+    
+        <!-- ? Content Analyser -->
+        <!-- * 3 Analysement Tests -->
+        <section class="file_precessor">
+            <button id="process" class="process">PROCESS</button>
+
+            <aside>
+                <div class="details detailSet-1">
+                    <h2>Primary Details</h2>
+                    <p class="file_name" id="FileName"><span class="query">File Name :</span> <span class="answer"></span></p>
+                    <p class="file_size" id="FileSize"><span class="query">File Size :</span> <span class="answer"></span></p>
+                    <p class="file_type" id="FileType"><span class="query">File Type :</span> <span class="answer"></span></p>
+                </div>
+            
+                <div class="details detailSet-2">
+                    <h2>Secondary Details</h2>
+                    <p class="file_paras" id="FileParas"><span class="query">Paragraphs  :</span> <span class="answer"></span></p>
+                    <p class="file_lines" id="FileLines"><span class="query">Lines Used  :</span> <span class="answer"></span></p>
+                    <p class="file_words" id="FileWords"><span class="query">Words Used  :</span> <span class="answer"></span></p>
+                    <p class="characters" id="Characters"><span class="query">Characters :</span> <span class="answer"></span></p>
+                </div>
+            </aside>
+
+        </section>
+    </div>
+
+
+ 
+    <!-- ? Content Listener  -->
+    <!-- * It Reads the Text -->
+    <div class="content_reader">
+        <textarea disabled name="textarea" id="textarea" placeholder="Click on Speak button to listen content . . ." class="content"></textarea>
+        <button id="speakBtn" class="speakBtn">Speak</button>
+    </div>
+
+
+    <!-- ? Delete File Button Functinality  -->
+    <!-- * It deletes all the Files of File Input -->
+    <script type="text/javascript">
+        function DelFile(param) {
+            let allFiles = document.getElementById('FileInp');
+            allFiles.value = '';
+            param.parentElement.remove();
+        }
+    </script>
+
+</body>
+
+</html>

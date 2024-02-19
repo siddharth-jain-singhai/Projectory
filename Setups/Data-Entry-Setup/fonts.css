@@ -1,0 +1,14 @@
+/*
+    ? Data Entry | CSS Fonts File
+    * Responsible for used Font Styles
+*/
+
+@font-face {
+    font-family: "BreeSerif";
+    src: url("./Fonts/BreeSerif.ttf");
+}
+
+@font-face {
+    font-family: "ShareTechMono";
+    src: url("./Fonts/ShareTechMono.ttf");
+}

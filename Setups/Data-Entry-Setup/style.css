@@ -1,0 +1,285 @@
+/*
+    ? Data Entry | CSS File
+    * Responsible for UI/UX Design
+*/
+
+/** Root Variables */
+:root{
+    /*-- Font Families --*/
+    --font-bs: "BreeSerif";
+    --font-sm: "ShareTechMono";
+
+    /*-- Font Colors --*/
+    --clr-black: #000000;
+    --clr-white: #FFFFFF;
+    --clr-green: #0C9E12;
+    --clr-green-light1x: #38C25F;
+    --clr-green-light2x: #58CD79;
+
+    /*-- Font Sizes --*/
+    --fs-title: 1.8em;
+    --fs-heads: 1.2em;
+    --fs-paras: 1em;
+    
+    /*-- Object Sizes --*/
+    --main-container: clamp(1000px,100vw,1980px);
+
+    /*-- Radius | Paddings | Margins --*/
+    --padd-xaxis: 4%;
+    --padd-yaxis: 4%;
+    --side-padd2: 3rem;
+    --border-p40: 10px;
+    --border-p50: 15px;
+    --btn-padding: .5rem 1.8rem;
+    --inp-padding: 0rem 1rem;
+}
+
+
+
+/** Universal Configuration */
+* {
+    padding: 0%; margin: 0%;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+
+/** Primary Configuration */
+html{font-size: clamp(0.5rem,1.12vw,1.5rem);}
+html{scroll-behavior: smooth;}
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/** Secondary Configuration */
+html > body{background: var(--clr-green-light1x);}
+.input,.button{
+    border-radius: var(--border-p40);
+    outline: none; border: none;
+}
+
+
+
+/** Project Body */
+.project_body{
+    width: var(--main-container);
+    margin: 0% auto;
+}
+
+
+
+/** Project Title */
+.title_bar{
+    color: var(--clr-white);
+    background: var(--clr-green);
+    font-family: var(--font-bs);
+    font-size: var(--fs-title);
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+
+
+/** Form Section */
+.form_fill{
+    padding: var(--padd-yaxis) var(--padd-xaxis);
+
+    & .profile_pic{
+        display: inline-block;
+        width: 20%; aspect-ratio: 1/1;
+        border-radius: var(--border-p50);
+        background: var(--clr-green-light2x);
+        cursor: pointer;
+        overflow: hidden;
+
+        & .pic{height: 100%; width: 100%;}
+        box-shadow: 10px 10px 25px rgba(0,0,0,0.25);
+    }
+
+    & .profile_details{
+        float: right;
+        width: 55%; aspect-ratio: 1/0.36;
+        display: flex; flex-flow: column;
+        justify-content: space-between;
+
+        & .input{
+            width: 35%;
+            height: calc(100% / 5.5);
+            color: var(--clr-black);
+            font-family: var(--font-sm);
+            font-size: var(--fs-paras);
+            padding: var(--inp-padding);
+            border-bottom: 3px solid var(--clr-green);
+            background: var(--clr-green-light2x);
+            
+            &::placeholder{
+                color: var(--clr-green);
+                font-family: var(--font-bs);
+                font-size: var(--fs-heads);
+                text-align: center;
+            }
+
+            &::-webkit-inner-spin-button{display: none;}
+            &.ryt{align-self: flex-end;}
+        }
+
+        & .name,.addr{text-transform: capitalize;}
+    }
+}
+
+
+
+/** Button Section */
+.data_feed{
+    display: flex;
+    padding: 0rem var(--padd-xaxis);
+    justify-content: space-between;
+    align-items: end;
+
+    & .add_data{
+        box-shadow: 0 0 50px rgba(0,0,0,.25);
+
+        padding: var(--btn-padding);
+        font-family: var(--font-bs);
+        font-size: var(--fs-heads);
+        background: var(--clr-green);
+        color: var(--clr-white);
+        cursor: pointer;
+    }
+
+    .decorate{
+        width: 82%;height: 10px;
+        border-bottom: 3px solid var(--clr-green);
+
+        &::before{
+            content: "";
+            width: 8px;
+            aspect-ratio: 1/1;
+            position: absolute;
+            background: var(--clr-green);
+            bottom: -60%;left: -5px;
+            rotate: 45deg;
+        }
+    }
+}
+
+
+
+/** Data Preview Section */
+.data_prev{
+    padding: var(--padd-yaxis) var(--padd-xaxis);
+
+    & .data{
+        width: 100%; aspect-ratio: 1/0.25;
+        border-radius: var(--border-p50);
+        background: var(--clr-green-light2x);
+        box-shadow: 10px 10px 50px rgba(0,0,0,.25);
+        overflow: hidden;
+
+        & .heads{
+            display: flex;
+            height: 15%; width: 100%;
+            color: var(--clr-white);
+            background: var(--clr-green);
+            font-family: var(--font-bs);
+            font-size: var(--fs-heads);
+            text-align: center;
+
+            & .head{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: 100%; width: calc(80%/4);
+                &:nth-child(1),&:nth-child(5)
+                {width: calc(20%/2);}
+            }
+        }
+
+        & .entrys{
+            width: 100%;
+            height: calc(100% - 15%);
+            overflow: auto;
+
+            & .wrapper{
+                display: flex;
+                width: 100%; height: 15%;
+
+                & .entry{
+                    border: none;
+                    border-bottom: 1px solid var(--clr-black);
+                    border-right: 1px solid var(--clr-black);
+                    &:last-child{border-right: none;}
+
+                    background: transparent;
+                    padding: var(--inp-padding);
+                    font-family: var(--font-sm);
+                    font-size: var(--fs-paras);
+                    text-align: center;
+
+                    height:100%; width: calc(80%/4);
+                    &:nth-child(1),&:nth-child(5)
+                    {width: calc(20%/2);}
+
+                    &:nth-child(2),&:last-child
+                    {text-transform: capitalize;}
+
+                    &:first-child{pointer-events: none;}
+                }
+            }
+        }
+    }
+}
+
+
+
+/** Picture Preview Section */
+.picture_prev{
+    backdrop-filter: blur(5px);
+    height: 100%; width: 100%;
+    top: 0%; left: 0%;
+    position: absolute;
+    z-index: 10;
+
+    & .wrapper{
+        width: 20%; aspect-ratio: 1/1.15;
+        margin: calc((100vh - (20% * 1.15))/2) auto;
+        outline: 2px solid var(--clr-black);
+        border-radius: var(--border-p50);
+        outline-offset: 3px;
+        overflow: hidden;
+
+        & .user_pic{
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: var(--clr-green-light2x);
+        }
+
+        .close{
+            border: none;
+            cursor: pointer;
+            color: var(--clr-white);
+            background: var(--clr-green);
+            font-family: var(--font-bs);
+            font-size: var(--fs-heads);
+            height: calc(100% - 87%);
+            width: 100%;
+        }
+    }
+}
+
+
+
+/** Helping Classes */
+.hide{display: none;}
+.warn{
+    padding: 0.5rem 1rem;
+    background: #f5deb3;
+    font-size: 1rem;
+    display: none;
+}

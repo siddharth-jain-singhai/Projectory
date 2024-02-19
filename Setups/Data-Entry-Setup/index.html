@@ -1,0 +1,107 @@
+<!--
+    ? Data Entry | Index File
+    * Responsive for User Interface
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- * Meta Configures -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+
+    <!-- * Internal Links -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="media.css">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+    <script async type="module" src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- * Main Container -->
+    <div class="project_body">
+
+        <!-- * Project Title -->
+        <h1 class="title_bar">Data Entry</h1>
+
+
+
+        <!-- * Form Filling Section -->
+        <div class="form_fill">
+
+            <!-- * Profile Picture -->
+            <label for="fill_pic" class="profile_pic">
+                <input hidden type="file" name="File" id="fill_pic" class="input fill_pic" accept=".png,.jpg,.jpeg">
+                <img width="50px" alt="Profile Picture" src="./Media/user.png" id="pic" class="pic">
+            </label>
+
+            <!-- * Profile Details -->
+            <section class="profile_details">
+                <input autocomplete="off" type="text" placeholder="Enter Name" id="name" class="input name">
+                <input autocomplete="off" type="text" placeholder="Enter Age" id="age" class="input age ryt">
+                <input autocomplete="off" type="text" placeholder="Enter Phone" id="call" class="input call">
+                <input autocomplete="off" type="text" placeholder="Enter Address" id="addr" class="input addr ryt">
+                <input autocomplete="off" type="text" placeholder="Enter Email" id="email" class="input email">
+            </section>
+        </div>
+
+
+
+        <!-- * Add Entry Button -->
+        <div class="data_feed">
+            <button type="button" id="add_data" class="button add_data">
+                Add Data
+            </button>
+            <span class="decorate"></span>
+        </div>
+
+
+
+        <!-- * Data Preview Section -->
+        <div class="data_prev">
+
+            <!-- * Data Wrapper -->
+            <section id="data" class="data">
+
+                <!-- * Data Heads Section -->
+                <div id="heads" class="heads">
+                    <p class="head">S_No</p>
+                    <p class="head">Name</p>
+                    <p class="head">Email</p>
+                    <p class="head">Phone</p>
+                    <p class="head">Age</p>
+                    <p class="head">Address</p>
+                </div>
+
+                <!-- * Data Entry Section -->
+                <div id="entrys" class="entrys"></div>
+            </section>
+        </div>
+
+
+
+        <!-- * Picture Preview Section -->
+        <div id="picture_prev" class="picture_prev hide">
+            <section class="wrapper">
+                <img width="50px" alt="User Picture" src="./Media/user.png" id="user_pic" class="user_pic">
+            <br>
+                <button type="button" id="close" class="close">Close</button>
+            </section>
+        </div>
+    </div>
+
+
+
+    <!-- * Warning Panel -->
+    <p id="warn" class="warn">
+        <code>
+            Sorry to Say! But this App is especially dedicated to the 
+            <br> large and medium size devices <b>like Desktops and Laptops.</b>
+            <br> <em>Make sure you are using Laptop or Desktop. . .</em>
+        </code>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+/*
+    ? Data Entry | CSS Media File
+    * Responsible for UI/UX Responsiveness
+*/
+
+@media only screen and (min-width: 1981px){
+    .project_body{display: none;}
+    .warn{display: block;}
+}
+
+@media only screen and (max-width: 999px){
+    .project_body{display: none;}
+    .warn{display: block;}
+}

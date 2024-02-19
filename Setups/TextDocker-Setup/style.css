@@ -1,0 +1,210 @@
+/*
+    ? Project Styling Sheet 
+    * CSS Theme Decorations
+    * It Contains Primary Configurations & Theme Styling Classes 
+*/
+
+:root{
+    --bodyColor: #9170F8;
+    --subClrFFF: #ffffff;
+    --subClrBlu: #3399db;
+
+    --bdrRound: 0.3rem;
+    --secondaryHeads: 1.5rem;
+    --minWidth: 260px;
+
+    --typeFont: 'Share Tech Mono';
+}
+
+*{
+    position: relative;
+    padding: 0%; margin: 0%;
+    box-sizing: border-box;
+    border: none; outline: none;
+    font-family: 'Bree Serif';
+    font-weight: 100;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    opacity: 0.7;
+    min-height: 100vh;
+    padding: 0rem 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 40%, 
+    rgba(0, 0, 255, 0.3)), url("./Media/bg.jpg");
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+h1{
+    color: var(--subClrFFF);
+    text-align: center;
+    margin: 5rem 0rem;
+    letter-spacing: 1px;
+
+    & span{
+        font-size: clamp(2rem,4.5vw,5.6rem);
+        outline: 1.5px solid var(--subClrFFF);
+        border-radius: 1rem;
+        padding: 0.5rem 3rem;
+    }
+}
+
+
+
+.file_catcher{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 4rem;
+    justify-content: center;
+    min-width: var(--minWidth);
+    margin-bottom: 3rem;
+
+    & .file_uploader{
+        background: var(--subClrFFF);
+        border-radius: var(--bdrRound);
+        min-width: var(--minWidth);
+        padding: 1.5rem 1.5rem; 
+
+        & .sensor_area{
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            grid-row-gap: 1rem;
+            outline: 3px dashed var(--subClrBlu);
+            border-radius: var(--bdrRound);
+            text-align: center;
+            padding: 2rem 7rem;
+
+            & .upload_ico{
+                width: clamp(8rem,15vw,18rem);
+            }
+
+            & .upload_subtitles{
+                font-size: clamp(1.1rem,1.2vw,1.5rem)
+            }
+
+            & .upload_subtitles::first-line{
+                color: var(--subClrBlu);
+                font-size: clamp(1.3rem,1.7vw,2.1rem);
+            }
+        }
+
+        & .doc_prev{
+            margin-top: 1rem;
+            display: flex; gap: 1rem;
+            align-items: center;
+            border-radius: var(--bdrRound);
+            background: rgba(0,0,255,0.2);
+            padding: 0.5rem 0.5rem;
+
+            & i{
+                color: blue;
+                font-size: clamp(1.1rem,1.5vw,1.5rem);
+            }  
+            
+            & i:last-child{
+                cursor: pointer;
+                color: red;
+            }
+
+            & span{
+                flex-grow: 1;
+                font-family: var(--typeFont);
+                overflow: auto;
+            }
+        }
+    }
+
+    & .file_precessor{
+        background: var(--subClrFFF);
+        border-radius: var(--bdrRound);
+        min-width: var(--minWidth);
+        max-height: 235px;
+        overflow: hidden;
+
+        & button{
+            width: 100%;
+            background: rgba(0,128,0,0.7);
+            font-size: clamp(1.8rem,2.5vw,3.2rem);
+            font-family: var(--typeFont);
+            color: var(--subClrFFF);
+            padding: 1rem 7rem;
+        }
+
+        & aside{
+            height: 162px;
+            overflow: auto;
+        }
+
+        & .details{
+            margin: 1rem 0rem;
+            margin-left: 1rem;
+            padding: 0.5rem;
+            border-bottom: 1px solid black;
+        }
+
+        & .details span{
+            font-family: var(--typeFont);
+        }
+    }
+}   
+
+
+
+.content_reader{
+    display: flex;
+    flex-flow: column;
+    background-color: var(--subClrFFF);
+    border-radius: var(--bdrRound);
+    width: clamp(450px,60vw,1000px);
+    height: 350px; margin: 0rem auto;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+
+    & .content{
+        flex-grow: 1;
+        font-size: 1rem;
+        font-family: var(--typeFont);
+        background: rgba(255,255,0,0.6);
+        border-radius: var(--bdrRound);
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        white-space: normal;
+        text-align: justify;
+        resize: none;
+    }
+
+    & .content,
+      .content::placeholder{
+        color: black;
+    }
+
+    & .content::selection{
+        color: yellow;
+        background-color: red;
+    }
+
+    & button{
+        width: 100%;
+        font-size: x-large;
+        background: var(--subClrBlu);
+        border-radius: var(--bdrRound);
+        color: var(--subClrFFF);
+        padding: 0.5rem 0rem;
+        letter-spacing: 1px;
+    }
+}
