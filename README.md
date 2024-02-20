@@ -30,10 +30,10 @@ Data Entry is a CRUD app, This project provides CRUD operations like Create, Rea
 
 ### Controls :
 
-+	`Delete` Key to delete entry
-+	`Enter` key to see profile picture
-+	Just `click & retype` in a cell, you want to update
-+	`Add Data` key to add new entry of form fillings
++	`Delete` Key to delete entry _( Keyboard )_
++	`Enter` key to see profile picture _( Keyboard )_
++	Just `click & retype` in a cell, you want to update _( Keyboard )_
++	`Add Data` key to add new entry of form fillings _( User-Interface )_
 
 ```
 Important!	This Project "Data Entry" is created for medium or big screen users like Desktops or Laptops specially.
@@ -65,9 +65,9 @@ This project confirms Text-Documents and provides details in just single click, 
 
 ### Controls :
 
-+	`Process` Key to log details
-+	`Speak` key to listen file text
-+	`Upload` key to insert file in project
++	`Process` Key to log details  _( User-Interface )_
++	`Speak` key to listen file text  _( User-Interface )_
++	`Upload` key to insert file in project  _( User-Interface )_
 
 ```
 Important!	You can use only Text-Docs upto 10Mb.
