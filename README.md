@@ -38,7 +38,7 @@ Data Entry is a CRUD app, This project provides CRUD operations like Create, Rea
 ```
 Important!	This Project "Data Entry" is created for medium or big screen users like Desktops or Laptops specially.
 ```
-
+<\br>
 
 ### TEXTDOCKER
 ### Introduction
