@@ -7,7 +7,7 @@ All the projects are ©️ copyright to Author - "Siddharth Jain Singhai",
 ### DATA ENTRY
 ### Introduction
 This project is named for [__*Data Entry*__](https://siddharth-jain-singhai.github.io/Projectory/Setups/Data-Entry-Setup/index.html).
-Data Entry is a CRUD app, this project provides CRUD operations like Create, Read, Update, & Delete with high definitive validation to sure or confirm user details in order to maintaining its security with predefined formats using RegExp. &nbsp; [__`Play Demo`__](https://drive.google.com/uc?export=download&id=1CMDIeaAUJpdFHeiCOdmEBspwrjzL17hs "Muted")
+Data Entry is a CRUD app, this project provides CRUD operations like Create, Read, Update, & Delete with high definitive validation to sure or confirm user details in order to maintaining its security with predefined formats using RegExp. &nbsp; [__`Play Demo`__](https://drive.google.com/file/d/1CMDIeaAUJpdFHeiCOdmEBspwrjzL17hs/view?usp=sharing "Muted")
 
 > <img alt="Data-Entry-Preview" width="500px" src="https://github.com/siddharth-jain-singhai/Projectory/blob/main/Previews/Data-Entry-Preview.png">
 
